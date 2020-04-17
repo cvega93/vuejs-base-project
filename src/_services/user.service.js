@@ -7,7 +7,18 @@ export const userService = {
 };
 
 function login(email, password) {
-    return requestService.post('/oauth/login', {email: email, password: password});
+    // return requestService.post('/oauth/login', {email: email, password: password})
+
+    //PUT HERE API CALL
+    return new Promise((resolve) => {
+        resolve({
+            'success': true,
+            'data': {
+                'email': email,
+                'access_token': password
+            }
+        });
+    })
 }
 
 function getUserSession() {

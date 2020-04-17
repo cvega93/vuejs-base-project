@@ -21,6 +21,9 @@
         },
         created() {
             this.returnUrl = this.$route.query.returnUrl || '/';
+            if (Object.keys(this.$store.state.account.user).length) {
+                this.$router.push({name: 'home'});
+            }
         },
         methods: {
             handleSubmit() {

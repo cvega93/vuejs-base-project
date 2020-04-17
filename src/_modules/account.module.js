@@ -45,13 +45,7 @@ const actions = {
                     dispatch('alert/error', error, {root: true});
                 }
             );
-    },
-    // async getUserSession({commit}) {
-    //     // const user = await userService.getUserSession();
-    //     // console.log(user);
-    //     // commit('loginSuccess', user);
-    //     // return user;
-    // }
+    }
 };
 
 const mutations = {
